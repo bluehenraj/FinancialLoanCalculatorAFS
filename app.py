@@ -11,11 +11,12 @@ app = Flask(__name__)
 def my_home():
     return render_template('index.html')
 
-
 # Redirect Pages
-@app.route('/<string:page_name>')
-def html_page(page_name):
-    return render_template(page_name)
+
+
+@app.route('/form')
+def form_page():
+    return render_template('form.html')
 
 
 # App run
