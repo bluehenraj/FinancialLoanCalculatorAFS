@@ -1,0 +1,11 @@
+Creating the relation:
+
+create table users(id int primary key auto_increment, first_name varchar(20) not null, last_name varchar(20) not null, grocery_cost int default 200, auto_cost int default 100, housing_cost int default 1600, debt_total int not null, income int not null);
+
+Inserting basic info:
+
+insert into users(first_name, last_name, grocery_cost, auto_cost, housing_cost, debt_total, income) values (?,?,?,?,?,?,?);
+
+Getting into back:
+
+select first_name, last_name, grocery_cost, auto_cost, housing_cost, debt_total, income from users where id = (?);
