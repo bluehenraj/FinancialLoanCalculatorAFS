@@ -11,6 +11,9 @@
 	box-sizing:border-box;
   }
   
+  p {
+	  font-size:20px;
+  }
   body, html{
 	font-family: 'Open Sans', sans-serif;
   }
@@ -47,7 +50,7 @@
   }
   
   .two{
-	top:500px;
+	top:100px;
 	background:#019cd4;
   }
   
@@ -67,7 +70,7 @@
   .one  .heading{
 	color:#607d8b;
 	text-transform:capitalize;
-	font-size:20px;
+	font-size:30px;
 	font-weight:900;
 	margin-top:40px;
   }
