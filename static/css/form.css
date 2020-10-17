@@ -22,6 +22,10 @@ html, body{
 	font-weight: 200;
   }
 
+  h3 {
+	  font-size: 2rem;
+  }
+
 .quote {
 	display: block;
 	text-align: center;
