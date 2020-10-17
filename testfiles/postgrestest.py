@@ -3,7 +3,8 @@ import Query
 import connections
 
 def main():
-    yeet = Query.Query("Ryan", "Rosiak", 500, 3025851206, 24, 35, 10000, 5000, 700, 20)
+    yeet = Query.Query("Ryan", "Rosiak", 9000, 9000, 500, 1, 3025551206, 105, 120, 15, 85, 156, 900, 800,
+                       56, 500, 550, 235, 110, 300)
 
     print(yeet)
 
