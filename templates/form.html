@@ -19,31 +19,73 @@
 			function sum() {
 				var incomeTotal = document.getElementById('incomeTotal').value;
 				var debtTotal = document.getElementById('debtTotal').value;
-				var rent = document.getElementById('rent').value;
-				var propTaxes = document.getElementById('propTaxes').value;
-				var power = document.getElementById('power').value;
-				var waterSewer = document.getElementById('waterSewer').value;
-				var garbagerecycling = document.getElementById('garbagerecycling').value;
-				var bundlepackagecable = document.getElementById('bundlepackagecable').value;
 
-				var carpayment = document.getElementById('carpayment').value;
+				var rent = 1600;
+				if(document.getElementById('rent').value != 0){
+					rent = document.getElementById('rent').value;
+				}
+
+				var propTaxes = 190;
+				if(document.getElementById('propTaxes').value != 0){
+					propTaxes = document.getElementById('propTaxes').value;
+				}
+			
+				var power = 90;
+				if(document.getElementById('power').value != 0){
+					power = document.getElementById('power').value;
+				}
+
+				var waterSewer = 72;
+				if(document.getElementById('waterSewer').value != 0){
+					waterSewer =document.getElementById('waterSewer').value;
+				}
+
+				var garbagerecycling = 14;
+				if(document.getElementById('garbagerecycling').value != 0){
+					garbagerecycling =document.getElementById('garbagerecycling').value;
+				}
+
+				var bundlepackagecable = 104;
+				if(document.getElementById('bundlepackagecable').value != 0){
+					bundlepackagecable =document.getElementById('bundlepackagecable').value;
+				}
+
+				var carpayment = 280;
+				if(document.getElementById('carpayment').value != 0){
+					carpayment =document.getElementById('carpayment').value;
+				}
+			
 				var carpayment2 = document.getElementById('carpayment#2').value;
-				var autoinsurance = document.getElementById('autoinsurance').value;
-				var gasoline = document.getElementById('gasoline').value;
 
-				var groceries = document.getElementById('groceries').value;
-				var personalcarehomeitems = document.getElementById('personalcarehomeitems').value;
+				var autoinsurance = 140;
+				if(document.getElementById('autoinsurance').value != 0){
+					autoinsurance =document.getElementById('autoinsurance').value;
+				}
+				var gasoline = 150;
+				if(document.getElementById('gasoline').value != 0){
+					gasoline =document.getElementById('gasoline').value;
+				}
+
+				var groceries = 200;
+				if(document.getElementById('groceries').value != 0){
+					groceries =document.getElementById('groceries').value;
+				}
+
+				var personalcarehomeitems = 80;
+				if(document.getElementById('personalcarehomeitems').value != 0){
+					personalcarehomeitems = document.getElementById('personalcarehomeitems').value;
+				}
 
 				var ideal_monthly = 0.025 * parseInt(debtTotal); //apparently?
 				var income_monthly = parseFloat(incomeTotal) / 12;
-
+				income_monthly = income_monthly - rent - propTaxes - power - waterSewer - garbagerecycling - bundlepackagecable
+					- carpayment - carpayment2 - autoinsurance - gasoline - groceries - personalcarehomeitems;
+				
 				var result = ideal_monthly;
 				if (income_monthly < ideal_monthly) { //cant pay more than ya got
 					result = income_monthly;
 				}
 
-				result = result - rent - propTaxes - power - waterSewer - garbagerecycling - bundlepackagecable
-					- carpayment - carpayment2 - autoinsurance - gasoline - groceries - personalcarehomeitems;
 				if (!isNaN(result)) {
 
 					if (result > 0) {
