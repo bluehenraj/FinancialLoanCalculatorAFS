@@ -12,6 +12,17 @@ html, body{
 	font-weight: 200;
   }
 
+.quote {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #fff;
+}
+
+
+
   a{
 	text-decoration: none;
   }
