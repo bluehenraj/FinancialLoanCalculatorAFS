@@ -7,24 +7,32 @@ from Query import Query
 app = Flask(__name__)
 
 # Home
+
+
 @app.route('/')
 def my_home():
     return render_template('index.html')
 
 # Redirect Pages
+
+
 @app.route('/form')
 def form_page():
     return render_template('form.html')
 
+
 @app.route('/quiz')
 def quiz_page():
     return render_template('quiz.html')
+
 
 @app.route('/quizpages/videopage')
 def video_page():
     return render_template('/quizpages/videopage.html')
 
 # Submitting form
+
+
 @app.route('/submitform', methods=['POST'])
 def form_submit():
     if request.method == 'POST':
@@ -48,7 +56,13 @@ def form_submit():
     else:
         return 'something went wrong. try again!'
 
-    return redirect('/thankyou.html')
+    return redirect(url_for('thankyou'))
+
+
+@app.route('/thankyou')
+def thankyou():
+    return render_template('thankyou.html')
+
 
 # App run
 if __name__ == "__main__":
