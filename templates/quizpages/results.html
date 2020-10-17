@@ -7,30 +7,19 @@
 {% block body %}
 
 
-<div class="bg-modal">
-	<div class="animated">
+<div class= "result-background">
 
+    <div class= "result-center">
+        <script>
+            var value = localStorage["1"];
+            var picSource = document.createElement("img");
+            picSource.src = localStorage["2"] + ".jpg"; 
+            picSource.setAttribute("class", "result-pic");
 
-		<div class="modal-contents">
-			<script>
-				var value = localStorage["1"];
-				var x = document.createElement("H1");
-				var t = document.createTextNode(value);
-				x.appendChild(t);
-				x.setAttribute("class", "final-result");
-				document.body.appendChild(x);
-			</script>
-
-			<div class="result">
-				<h1 class="result-text" id="value"></h1>
-			</div>
-			<a href="/">
-				<button class="button-trivia btn-email">Return Home</button>
-			</a>
-		</div>
-	</div>
-
-</div>
+            document.write("<h1>" + value + "</h1>");
+            document.body.appendChild(picSource);
+        </script>
+    </div>
 
 </div>
 
