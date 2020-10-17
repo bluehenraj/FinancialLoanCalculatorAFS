@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Do Not Give Away Money!"
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = 'You Have Huge Spending And No Records!';
+        })
+    })
+
+</script>
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>What is the purpose of recording expenditures?</h4>
+
+            <div class="multiple-choice">
+                <button class="buttongood" >To be concious of all spendings</button>
+                <button class="buttongood" >To be aware of wants vs needs</button>
+                <button class="buttonbad" >There is no need</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

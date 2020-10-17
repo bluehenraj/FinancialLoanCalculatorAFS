@@ -15,6 +15,7 @@ def my_home():
 def form_page():
     return render_template('form.html')
 
+#   quiz
 @app.route('/quiz')
 def quiz_page():
     return render_template('quiz.html')
@@ -22,6 +23,36 @@ def quiz_page():
 @app.route('/quizpages/videopage')
 def video_page():
     return render_template('/quizpages/videopage.html')
+
+
+@app.route('/quizpages/question2')
+def question2_page():
+    return render_template('/quizpages/question2.html')
+
+@app.route('/quizpages/question2bad')
+def question2bad_page():
+    return render_template('/quizpages/question2bad.html')
+
+@app.route('/quizpages/question31')
+def question31_page():
+    return render_template('/quizpages/question31.html')
+
+@app.route('/quizpages/question31bad')
+def question31bad_page():
+    return render_template('/quizpages/question31bad.html')
+
+@app.route('/quizpages/question32')
+def question32_page():
+    return render_template('/quizpages/question32.html')
+
+@app.route('/quizpages/question32bad')
+def question32bad_page():
+    return render_template('/quizpages/question32bad.html')
+
+@app.route('/quizpages/results')
+def results_page():
+    return render_template('/quizpages/results.html')
+
 
 # Submitting form
 @app.route('/submitform', methods=['POST'])

@@ -5,44 +5,67 @@
 {% endblock %}
 
 {% block body %}
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'question2';
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'question2bad';
+        })
+    })
 
-<div class="app">
+</script>
+
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>What are some warning signs that you are in financial danger?</h4>
+
+            <div class="multiple-choice">
+                <button class="buttongood" >Using credit cards to buy necessities because you do not have enough money</button>
+                <button class="buttongood" >You have bills that are unpaid</button>
+                <button class="buttongood" >You have no money set aside for emergencies</button>
+                <button class="buttonbad" >What warning signs??</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="app">
 	<div class="box">
 
-		<!-- <video src="https://www.myfinancialgoals.org/online-classes/setting-financial-goals-and-creating-a-spending-plan#TEST"
-            type="video/webm">
-        
-        </video> -->
+		
 		<video width="95%" height="95%" controls id="spendingPlanVideo">
 			<source
 				src="https://vod-progressive.akamaized.net/exp=1602921599~acl=%2A%2F661570648.mp4%2A~hmac=4431ef99d7ececf9f4072fe16e4028de034218024bb887e1f28f879c0c767079/vimeo-prod-skyfire-std-us/01/4376/7/196884148/661570648.mp4"
 				type="video/mp4">
 		</video>
-		<!-- <video width="95%" height="95%" autoplay><source src="C:/Users/yangs/Downloads/sample-mp4-file.mp4" type="video/mp4"></video> -->
-	</div>
-	<script>
-		$(document).ready(function () {
-			var vid = document.getElementById("spendingPlanVideo");
-			vid.addEventListener('timeupdate', (event) => {
-				console.log(vid.currentTime);
-				if (vid.currentTime >= 1 * 60) {
-					vid.pause();
-				}
-			});
-		});
-        // document.getElementById('spendingPlanVideo').addEventListener('timeupdate', function() {
-        //     var videoCurrentTime = document.getElementById('spendingPlanVideo').currentTime;
-        //     console.log(videoCurrentTime);
-        //     if (videoCurrentTime >= 3) {
+		
 
-        //         // this will pause the main timeline when the Video has played 3 or more seconds:
-        //         hypeDocument.pauseTimelineNamed('Main Timeline');
-        //         // this will pause the video also. You can resume with .play();
-        //         document.getElementById('spendingPlanVideo').pause();
-        //     }
+    </div>
 
-        // })
+	
+</div> -->
 
-	</script>
-</div>
+<script>
+    $(document).ready(function () {
+        var vid = document.getElementById("spendingPlanVideo");
+        vid.addEventListener('timeupdate', (event) => {
+            console.log(vid.currentTime);
+            if (vid.currentTime >= 1 * 60) {
+                vid.pause();
+            }
+        });
+    });
+
+
+</script>
 {% endblock %}

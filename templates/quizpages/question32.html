@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Your Previous Answers Contradict";
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = 'Continue To Be Concious!';
+        })
+    })
+
+</script>
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>Do you spend more money than you earn?</h4>
+
+            <div class="multiple-choice">
+                <button class="buttongood" >No</button>
+                <button class="buttonbad" >Yes</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

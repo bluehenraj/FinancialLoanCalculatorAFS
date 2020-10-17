@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Continue To Be Concious";
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Why are you even here?";
+        })
+    })
+
+</script>
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>Do you want to be poor and become broke?</h4>
+
+            <div class="multiple-choice">
+                <button class="buttongood" >No</button>
+                <button class="buttonbad" >Yes</button>
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+{% endblock %}

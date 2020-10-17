@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'question31';
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'question31bad';
+        })
+    })
+
+</script>
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>It is recommended that your first goal should be to:</h4>
+
+            <div class="multiple-choice">
+                <button class="buttongood" >Establish a cash reserve</button>
+                <button class="buttonbad" >Throw money</button>
+                <button class="buttonbad" >Buy everyone cars</button>
+                <button class="buttonbad" >Invest in covid merch</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

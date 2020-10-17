@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<script>
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "You are on the Right Track!"
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Brush Up on Some Basic Division"
+        })
+    })
+
+</script>
+
+
+<div class= "bg-modal">
+    <div class="animated">
+
+    
+        <div class = "modal-contents">
+            <h4>If the insurance policy on Tom's house is $2,400 per year and this bill is due every month, how much does Tom have to pay per month?</h4>
+
+            <div class="multiple-choice">
+                <button class="buttonbad" >$2,400 per month</button>
+                <button class="buttongood" >$200 per month </button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
