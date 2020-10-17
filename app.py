@@ -1,14 +1,8 @@
 from flask import Flask, render_template, url_for
 import os
 import sys
-from dotenv import load_dotenv
 
 app = Flask(__name__)
-
-# Load the environment variables
-load_dotenv()
-# Set the environment variable
-database_url = os.environ["DATABASE_URL"]
 
 # Home
 
