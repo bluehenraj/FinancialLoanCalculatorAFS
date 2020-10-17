@@ -17,14 +17,16 @@ html, body{
 	max-width: 1000px;
 	margin: 0 auto;
 	margin-top: 20rem !important;
+	padding-left: 10px;
+	padding-right: 10px;
 	position: relative;
-	  background-color: white;
+	  background-color: #a5def4;
   }  
 
   .tipman {
 	margin: 0;
 	padding-left: 4rem;
-	padding-top: 55rem;
+	padding-top: 45rem;
 	position: relative;
 	-ms-transform: translateY(-70%);
 	transform: translateY(-70%);
