@@ -6,7 +6,39 @@ html, body{
 	font-family: 'Open Sans', sans-serif;
 	background-color: #019cd4;
   }
-  
+
+  .flex-container {
+    display: flex;
+}
+
+  .tipbox {
+	width: 70%;
+	height: 7rem;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 20rem !important;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	  background-color: #a5def4;
+  }  
+
+  .tipman {
+	margin: 0;
+	padding-left: 4rem;
+	padding-top: 45rem;
+	position: relative;
+	-ms-transform: translateY(-70%);
+	transform: translateY(-70%);
+	width: 80%;
+  }
+
+  .tip-text {
+	  text-align: center;
+	  padding-top: 1rem;
+	  font-size: 1.25rem;
+  }
+
   .form-logo {
 	height: auto; 
     width: 50%; 
@@ -194,7 +226,7 @@ html, body{
 	right: 20px;
 	bottom: 20px;
   }
-  
+
   .form-wrapper .submit{
 	border: none;
 	outline: none;
