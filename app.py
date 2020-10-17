@@ -71,10 +71,6 @@ def form_submit():
         return 'something went wrong. try again!'
 
     return  render_template('index.html')
-@app.route('/quizpages/videopage')
-def video_page():
-    return render_template('/quizpages/videopage.html')
-
 
 # App run
 if __name__ == "__main__":
