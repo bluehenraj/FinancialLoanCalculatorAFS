@@ -1,14 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 import BasicInfo from './BasicInfoSlide/BasicInfo';
 
 function App() {
 
+  console.log("here")
   return (
 
     <div className ="app"> 
-      <BasicInfo name = "stuff"/>
+    fobar
+      <BasicInfo />
     </div>
   );
 }

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class ="app"> 
+    <div class = "box">
+        
+        <!-- <video src="https://www.myfinancialgoals.org/online-classes/setting-financial-goals-and-creating-a-spending-plan#TEST"
+            type="video/webm">
+        
+        </video> -->
+        <iframe width="95%" height="95%" id="spendingPlanVideo" src="https://player.vimeo.com/video/196884148" frameboarder="0"></iframe>
+        <!-- <video width="95%" height="95%" autoplay><source src="C:/Users/yangs/Downloads/sample-mp4-file.mp4" type="video/mp4"></video> -->
+    </div>
+    <script>
+
+        var vid = document.getElementById("spendingPlanVideo");
+        vid.addEventListener("timeupdate", function(){
+            console.log(vid.currentTime);
+            if(vid.currentTime >= 1 * 60) {
+                vid.pause();
+            }
+        });
+    
+        // document.getElementById('spendingPlanVideo').addEventListener('timeupdate', function() {
+        //     var videoCurrentTime = document.getElementById('spendingPlanVideo').currentTime;
+        //     console.log(videoCurrentTime);
+        //     if (videoCurrentTime >= 3) {
+            
+        //         // this will pause the main timeline when the Video has played 3 or more seconds:
+        //         hypeDocument.pauseTimelineNamed('Main Timeline');
+        //         // this will pause the video also. You can resume with .play();
+        //         document.getElementById('spendingPlanVideo').pause();
+        //     }
+    
+        // })
+    
+    </script>
+</div>
+{% endblock %}

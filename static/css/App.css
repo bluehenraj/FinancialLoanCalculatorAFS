@@ -1,10 +1,18 @@
-.playFont {
+.titleFont {
   font-size: 50px;
 }
+
 .playButton {
-  border: 1px solid cyan;
+  border: 1px solid black;
+  background: cyan;
+  display: flex;
   border-radius: 10px;
-  margin: 5px;
+  margin: 10%;
+  width: 20%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
 
 .box {

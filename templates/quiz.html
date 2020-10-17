@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block body %}
-<h1>QUIZ HERE</h1>
+<script>
+    $().ready(function () {
+        $('.playButton').click(function (){
+            window.location.href = 'quizpages/videopage';
+        })
+    })
+
+</script>
+
+<div class ="app"> 
+    <div class = "box">
+        <h1 class = "titleFont">Financial Education Class</h1>
+        
+        <button class = "playButton">Play!</button>
+
+        
+    </div>
+</div>
+
 {% endblock %}
