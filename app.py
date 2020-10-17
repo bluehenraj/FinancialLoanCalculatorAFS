@@ -11,14 +11,24 @@ load_dotenv()
 database_url = os.environ["DATABASE_URL"]
 
 # Home
+
+
 @app.route('/')
 def my_home():
     return render_template('index.html')
 
 # Redirect Pages
+
+
 @app.route('/form')
 def form_page():
     return render_template('form.html')
+
+
+@app.route('/quiz')
+def quiz_page():
+    return render_template('quiz.html')
+
 
 # App run
 if __name__ == "__main__":
