@@ -179,6 +179,10 @@ html, body{
 	cursor:pointer;
   }
   
+  .btn {
+	  margin-top: -4rem;
+  }
+
   .close{
 	position:relative;
 	top:0;
