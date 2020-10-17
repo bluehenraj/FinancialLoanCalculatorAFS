@@ -2,7 +2,6 @@ from flask import Flask, render_template, url_for, request, redirect
 import os
 import sys
 from dotenv import load_dotenv
-from Query import Query
 
 app = Flask(__name__)
 
@@ -23,44 +22,36 @@ def quiz_page():
 # Submitting form
 @app.route('/submitform', methods=['POST'])
 def form_submit():
-    # Must haves
-    # Name
+
     first_name = request.form['firstname']
     last_name = request.form['lastname']
-    # Financial Information (Needed)
+
     income = request.form['incomeTotal']
-    debt_total = request.form['debtTotal']
+    debtTotal = request.form['debtTotal']
 
-    # Can be without
-    # Housing Information
     rent = request.form.get('rent')
-    prop_tax = request.form.get('propTaxes')
-    phone_number = request.form.get('phone')
-    # Utilities
+    propTax = request.form.get('propTaxes')
+    phone = request.form.get('phone')
+
     power = request.form.get('power')
-    water_sewer = request.form.get('waterSewer')
-    garbage = request.form.get('gargagerecycling')
-    bundlepackage = request.form.get('bundlepackagecable')
-    # HealthCare
-    prescriptions = request.form.get('prescriptions')
-    doctorvisits = request.form.get('doctorvisits')
-    # ChildCare
-    daycare = request.form.get('daycare')
-    # Automobile
-    carpayment1 = request.form.get('carpayment')
-    carpayment2 = request.form.get('carpayment#2')
-    autoinsurance = request.form.get('autoinsurance')
-    gasoline = request.form.get('gasoline')
-    # Food
-    groceries = request.form.get('groceries')
-    pchi = request.form.get('personalcarehomeitems')
+    waterSewer = request.form.get('waterSewer')
+    insurance = request.form.get('insurance')
 
-    q = Query(first_name, last_name, prop_tax, phone_number, rent, debt_total, income,
-              power, water_sewer, insurance)
-    q.create_tables()
-    q.insert_all()
+    print(first_name)
+    print(last_name)
 
-    return render_template('index.html')
+    print(income)
+    print(debtTotal)
+
+    print(rent)
+    print(propTax)
+    print(phone)
+
+    print(power)
+    print(waterSewer)
+    print(insurance)
+
+    return  render_template('index.html')
 
 # App run
 if __name__ == "__main__":
