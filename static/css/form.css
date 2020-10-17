@@ -177,7 +177,8 @@ html, body{
   }
   
   .form-wrapper input[type="text"],
-  .form-wrapper input[type="password"]{
+  .form-wrapper input[type="password"],
+  .form-wrapper input[type="select"]{
 	display: block;
 	padding: 10px;
 	margin: 10px auto;
