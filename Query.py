@@ -4,41 +4,63 @@ from connections import get_connection
 from dotenv import load_dotenv
 
 CREATE_TABLE = """CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY,
-    first_name varchar(25) not null, last_name varchar(25) not null, income int not null, debt_total int not null,
-    rent int default 1600, prop_tax int default 1.05, phone_number varchar(14) default 3025551206, power int default 80,
-    water int default 72, garbage int default 14, cable int default 104, prescriptions int default 90,
-    doctor_visits int default 150, daycare int default 75, carpayment1 int default 280, carpayment2 int default 280,
-    autoinsurance int default 140, gasoline int default 150, groceries int default 200, pchi int default 80);"""
+    first_name varchar(25) not null, last_name varchar(25) not null, income INTEGER not null, debt_total INTEGER not null,
+    rent INTEGER default 1600, prop_tax FLOAT default 1.05, phone_number varchar(14) default 3025551206, power INTEGER default 80,
+    water INTEGER default 72, garbage INTEGER default 14, cable INTEGER default 104, prescriptions INTEGER default 90,
+    doctor_visits INTEGER default 150, daycare INTEGER default 75, carpayment1 INTEGER default 280, carpayment2 INTEGER default 280,
+    autoinsurance INTEGER default 140, gasoline INTEGER default 150, groceries INTEGER default 200, pchi INTEGER default 80);"""
 
-INSERT_INFO = """INSERT INTO users(first_name, last_name, prop_tax, phone_number, rent, debt_total, income,
-    power_bill, water_bill, insurance) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
+INSERT_INFO = """INSERT INTO users(first_name, last_name, income, debt_total, rent, prop_tax, phone_number,
+    power, water, garbage, cable, prescriptions, doctor_visits, daycare, carpayment1, carpayment2,
+    autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
 
 SELECT_INFO = """SELECT * from users where id = (%s);"""
 
 class Query:
-    def __init__(self, first_name, last_name, prop_tax, phone_number, rent, debt_total, income, power_bill, water_bill, insurance):
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, fn, ln, income, debt, rent, prop_tax, phone_number, power, water, garbage, cable,
+                 prescriptions, doctor_visits, daycare, carpayment1, carpayment2, autoinsurance, gasoline,
+                 groceries, pchi):
+        self.first_name = fn
+        self.last_name = ln
+        self.income = income
+        self.debt_total = debt
+        self.rent = rent
         self.prop_tax = prop_tax
         self.phone_number = phone_number
-        self.rent = rent
-        self.debt_total = debt_total
-        self.income = income
-        self.power_bill = power_bill
-        self.water_bill = water_bill
-        self.insurance = insurance
+        self.power = power
+        self.water = water
+        self.garbage = garbage
+        self.cable = cable
+        self.prescriptions = prescriptions
+        self.doctor_visits = doctor_visits
+        self.daycare = daycare
+        self.carpayment1 = carpayment1
+        self.carpayment2 = carpayment2
+        self.autoinsurance = autoinsurance
+        self.gasoline = gasoline
+        self.groceries = groceries
+        self.pchi = pchi
 
     def __str__(self):
-        return f"""First Name: {self.first_name}
-            Last Name: {self.last_name}
-            Property Tax: {self.prop_tax}
-            Phone Number: {self.phone_number}
-            Rent: {self.rent}
-            Debt Total: {self.debt_total}
-            Income: {self.income}
-            Power Bill: {self.power_bill}
-            Water Bill: {self.water_bill}
-            Insurance: {self.insurance}"""
+        return f"""\tFirst Name: {self.first_name}
+        Last Name: {self.last_name}
+        Income: {self.income}
+        Debt Total: {self.debt_total}
+        Rent: {self.rent}
+        Property Tax: {self.prop_tax}
+        Phone Number: {self.phone_number}
+        Power: {self.power}
+        Water: {self.water}
+        Garbage: {self.garbage}
+        Cable: {self.cable}
+        Prescriptions: {self.prescriptions}
+        Doctor Visits: {self.doctor_visits}
+        Daycare: {self.daycare}
+        Car Payment 1: {self.carpayment1} Car Payment 2: {self.carpayment2}
+        Auto Insurance: {self.autoinsurance}
+        Gasoline: {self.gasoline}
+        Groceries: {self.groceries}
+        PCHI = {self.pchi}"""
 
     def create_tables(self):
         """
@@ -56,10 +78,11 @@ class Query:
         with get_connection() as connection:
             with connection:
                 with connection.cursor() as cursor:
-                    cursor.execute(INSERT_INFO, (self.first_name, self.last_name, self.prop_tax,
-                                                 self.phone_number, self.rent, self.debt_total,
-                                                 self.income, self.power_bill, self.water_bill,
-                                                 self.insurance));
+                    cursor.execute(INSERT_INFO, (self.first_name, self.last_name, self.income, self.debt_total, self.rent,
+                                                 self.prop_tax, self.phone_number, self.power, self.water,
+                                                 self.garbage, self.cable, self.prescriptions, self.doctor_visits,
+                                                 self.daycare, self.carpayment1, self.carpayment2, self.autoinsurance,
+                                                 self.gasoline, self.groceries, self.pchi));
 
     def select_all(self, person_id):
         """
