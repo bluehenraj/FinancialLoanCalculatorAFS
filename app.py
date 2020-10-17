@@ -23,6 +23,7 @@ def quiz_page():
 @app.route('/submitform', methods=['POST'])
 def form_submit():
 
+    """
     # Mandatory
     # Name
     first_name = request.form['firstname']
@@ -53,7 +54,17 @@ def form_submit():
     # Food
     groceries = request.form.get('groceries')
     pchi = request.form.get('personalcarehomeitems')
-
+    """
+    if request.method == 'POST':
+        try:
+            data = request.form.to_dict()
+            data = data.items()
+            print(data)
+        except Exception as e:
+            print(e)
+            return 'Did not work'
+    else:
+        return 'something went wrong. try again!'
 
     return  render_template('index.html')
 
