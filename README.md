@@ -29,4 +29,4 @@ Goto localhost:5000/
 
  ## The Team!:
 
- [Image of team](https://i.imgur.com/UkKkaiS.jpg)
+![Image of the team](https://i.ibb.co/HpNK8F4/Code-For-Good.jpg)
