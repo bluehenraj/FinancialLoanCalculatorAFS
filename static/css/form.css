@@ -6,7 +6,36 @@ html, body{
 	font-family: 'Open Sans', sans-serif;
 	background-color: #019cd4;
   }
-  
+
+  .flex-container {
+    display: flex;
+}
+
+  .tipbox {
+	width: 70%;
+	height: 7rem;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 20rem !important;
+	position: relative;
+	  background-color: white;
+  }  
+
+  .tipman {
+	margin: 0;
+	padding-left: 4rem;
+	position: absolute;
+	top: 70%;
+	-ms-transform: translateY(-70%);
+	transform: translateY(-70%);
+	width: 20%;
+  }
+
+  .tip-text {
+	  text-align: center;
+	  padding-top: 1rem;
+  }
+
   .form-logo {
 	height: auto; 
     width: 50%; 
