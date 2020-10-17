@@ -4,9 +4,10 @@ html, body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #3498db;
+	background-color: #019cd4;
   }
   
+
   h1, h2, h3, h4, h5 ,h6{
 	font-weight: 200;
   }
@@ -103,8 +104,8 @@ html, body{
   }
   
   .steps li.is-active{
-	border-bottom: 1px solid #3498db;
-	color: #3498db;
+	border-bottom: 1px solid #019cd4;
+	color: #019cd4;
   }
   
   /* HEADER/TITLE */
@@ -153,7 +154,7 @@ html, body{
   }
   
   .form-wrapper .button, .form-wrapper .submit{
-	background-color: #3498db;
+	background-color: #019cd4;
 	display: inline-block;
 	padding: 8px 30px;
 	color: #fff;
@@ -216,7 +217,7 @@ html, body{
 	height: 30px;
 	line-height: 30px;
 	border-radius: 100%;
-	background-color: #3498db;
+	background-color: #019cd4;
 	color: #fff;
 	display: none;
   }
@@ -231,9 +232,10 @@ html, body{
   }
   
   .form-wrapper input[type="radio"]:checked + label {
-	border: 1px solid #3498db;
+	border: 1px solid #019cd4;
   }
   
   .form-wrapper input[type="radio"]:checked + label h4 {
-	color: #3498db;
+	color: #019cd4;
   }
+  
