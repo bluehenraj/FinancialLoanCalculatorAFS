@@ -11,9 +11,6 @@
 	box-sizing:border-box;
   }
   
-  p {
-	  font-size:20px;
-  }
   body, html{
 	font-family: 'Open Sans', sans-serif;
   }
@@ -31,8 +28,7 @@
 	 box-shadow: 0px 0px 28px rgba(0,0,0,.3);
 	 overflow:hidden;
   }
-  
-  
+
   .one , .two{
 	display:relative;
 	height:600px;
@@ -86,10 +82,8 @@
   }
   
   .container-email p{
-	font-size:12px;
-	color:#b7b7b7;
-	font-weight:lighter;
-	text-transform:capitalize;
+	color: black;
+	  font-size: 2rem;
   }
   
   input[type='text']{
