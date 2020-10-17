@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 import os
 import sys
 from dotenv import load_dotenv
+from Query import Query
 
 app = Flask(__name__)
 
