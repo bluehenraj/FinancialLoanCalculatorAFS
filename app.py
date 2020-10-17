@@ -81,7 +81,7 @@ def form_submit():
             q.create_tables()
             id_num = q.insert_all()
             print(id_num)
-            if condensed[21] != '':
+            if condensed[21] != 0:
                 q.insert_email(condensed[21], id_num)
         except Exception as e:
             print(e)
