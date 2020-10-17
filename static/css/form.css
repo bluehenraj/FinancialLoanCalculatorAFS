@@ -15,12 +15,23 @@ html, body{
 	display: block;
   	margin-left: auto;
 	margin-right: auto;
-	padding-bottom: 10rem;
+	margin-bottom: 10rem;
   }
 
   h1, h2, h3, h4, h5 ,h6{
 	font-weight: 200;
   }
+
+.quote {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #fff;
+}
+
+
 
   a{
 	text-decoration: none;
@@ -201,6 +212,10 @@ html, body{
 	font-family: 'Open Sans', sans-serif !important;
   }
   
+  .form-wrapper input[type="text"]:focus {
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+  }
+
   .form-wrapper input[type="radio"]{
 	display: none;
   }

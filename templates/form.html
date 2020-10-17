@@ -8,7 +8,58 @@
 
 <div class="container">
     <div class="wrapper">
-        <h1 class="form-title">American Financial Solutions</h1>
+        <div class="title">
+			<img src="/static/blue.jpg" width: 6% alt="Main Logo" class="logo">
+		</div>
+		
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        function sum() {
+            var incomeTotal = document.getElementById('incomeTotal').value;
+			var debtTotal = document.getElementById('debtTotal').value;
+			var rent = document.getElementById('rent').value;
+			var propTaxes = document.getElementById('propTaxes').value;
+			var power = document.getElementById('power').value;
+			var waterSewer = document.getElementById('waterSewer').value;
+			var garbagerecycling = document.getElementById('garbagerecycling').value;
+			var bundlepackagecable = document.getElementById('bundlepackagecable').value;
+
+			var carpayment = document.getElementById('carpayment').value;
+			var carpayment2 = document.getElementById('carpayment#2').value;
+			var autoinsurance = document.getElementById('autoinsurance').value;
+			var gasoline = document.getElementById('gasoline').value;
+
+			var groceries = document.getElementById('groceries').value;
+			var personalcarehomeitems = document.getElementById('personalcarehomeitems').value;
+
+			var ideal_monthly = 0.025*parseInt(debtTotal); //apparently?
+			var income_monthly = parseFloat(incomeTotal) / 12;
+			
+			var result = ideal_monthly;
+			if (income_monthly < ideal_monthly){ //cant pay more than ya got
+				result = income_monthly;
+			}
+
+			result = result - rent - propTaxes - power - waterSewer - garbagerecycling - bundlepackagecable
+			- carpayment - carpayment2 - autoinsurance - gasoline - groceries - personalcarehomeitems;
+            if (!isNaN(result)) {
+
+				if(result > 0){
+				document.getElementById('quotenum').innerHTML = result.toFixed(2) + ' /mo.';
+				}
+				else {
+					document.getElementById('quotenum').innerHTML = 'Bankruptcy';
+				}
+			}
+			
+
+        }
+	</script>
+	
+		<div class="quote">
+			<h3>Your quote will get more precise with more information:</h3>
+			<h1 id="quotenum">TBD /mo.</h1>
+		</div>
         <ul class="steps">
             <li class="is-active">Step 1</li>
             <li>Step 2</li>
@@ -32,30 +83,30 @@
             </fieldset>
             <fieldset class="section">
                 <h3>Financial Information</h3>
-                <input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income">
-                <input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt">
+                <input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income" onkeyup="sum()">
+                <input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt" onkeyup="sum()">
                 <div class="button">Next</div>
             </fieldset>
             <fieldset class="section">
                 <h3>Housing Information</h3>
-                <input type="text" name="rent" id="rent" placeholder="Monthly Rent">
-                <input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes">
+                <input type="text" name="rent" id="rent" placeholder="Monthly Rent" onkeyup="sum()">
+                <input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes" onkeyup="sum()">
                 <input type="text" name="phone" id="phone" placeholder="Home/Mobile Phone">
                 <div class="button">Next</div>
             </fieldset>
             <fieldset class="section">
                 <h3>Utilities</h3>
-                <input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
-                <input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
-                <input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling">
+                <input type="text" name="power" id="power" placeholder="Electric/Gas/Oil" onkeyup="sum()">
+                <input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer" onkeyup="sum()">
+                <input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling" onkeyup="sum()">
                 <input type="text" name="bundlepackagecable" id="bundlepackagecable"
-                    placeholder="Bundle Package/ Cable">
+                    placeholder="Bundle Package/ Cable" onkeyup="sum()">
                 <div class="button">Next</div>
             </fieldset>
             <fieldset class="section">
                 <h3>HealthCare</h3>
                 <input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
-                <input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
+                <input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits" >
                 <select name="others" id="others">
                     <option value="select">Others</option>
                     <option value="dentistvisits">Dentist Visits</option>
@@ -77,10 +128,10 @@
             </fieldset>
             <fieldset class="section">
                 <h3>Automobile</h3>
-                <input type="text" name="carpayment" id="carpayment" placeholder="Car Payment">
-                <input type="text" name="carpayment#2" id="carpayment#2" placeholder="Car Payment #2">
-                <input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance">
-                <input type="text" name="gasoline" id="gasoline" placeholder="Gasoline">
+                <input type="text" name="carpayment" id="carpayment" placeholder="Car Payment" onkeyup="sum()">
+                <input type="text" name="carpayment#2" id="carpayment#2" placeholder="Car Payment #2" onkeyup="sum()">
+                <input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance" onkeyup="sum()">
+                <input type="text" name="gasoline" id="gasoline" placeholder="Gasoline" onkeyup="sum()">
                 <select name="others" id="others">
                     <option value="select">Others</option>
                     <option value="maintenance">Maintenance</option>
@@ -91,9 +142,9 @@
             </fieldset>
             <fieldset class="section">
                 <h3>Food</h3>
-                <input type="text" name="groceries" id="groceries" placeholder="Groceries">
+                <input type="text" name="groceries" id="groceries" placeholder="Groceries" onkeyup="sum()">
                 <input type="text" name="personalcarehomeitems" id="personalcarehomeitems"
-                    placeholder="Personal Care/Home Items">
+                    placeholder="Personal Care/Home Items" onkeyup="sum()">
                 <select name="others" id="others">
                     <option value="select">Others</option>
                     <option value="diningout">Dining Out</option>
@@ -104,67 +155,140 @@
                 <div class="button">Next</div>
 			</fieldset>
 			<fieldset class="section">
-                <h3>Installment Loans</h3>
-                <select name="others" id="others">
-                    <option value="select">Select</option>
-                    <option value="studentloans">Student Loans</option>
-                    <option value="taxes">Taxes</option>
-                    <option value="businessloans">Business Loans</option>
-                    <option value="other">Other</option>
-                </select>
-                <div class="button">Next</div>
-            </fieldset>
-            <fieldset class="section">
-                <h3>Miscellaneous</h3>
-                <select name="others" id="others">
-                    <option value="select">Select</option>
-                    <option value="donations">Charitable Donations</option>
-                    <option value="tuition">Education/Tuition/Supplies</option>
-                    <option value="entertainment">Entertainment & Recreation</option>
-                    <option value="subscriptions">Electronic Subscriptions</option>
-                    <option value="petexpense">Pet Expense</option>
-                    <option value="jobthings">Job Related Expenses/Tools/Uniforms</option>
-                    <option value="laundry">Laundry/Dry Cleaning</option>
-                    <option value="storageunit">Storage Unit</option>
-                    <option value="emergencysavings">Emergency/Savings</option>
-                    <option value="gymmembership">Gym Membership</option>
-                    <option value="clothing">Clothing/Accessories</option>
-                    <option value="lifeinsurance">Life Insurance</option>
-                    <option value="othermisc">Other Misc</option>
-                </select>
-                <div class="button">Next</div>
-            </fieldset>
-            <fieldset class="section">
-                <h3>What are you looking for?</h3>
-                <div class="row cf">
-                    <div class="four col">
-                        <input type="radio" name="r1" id="r1" checked>
-                        <label for="r1">
-                            <h4>Debt Management</h4>
-                        </label>
-                    </div>
-                    <div class="four col">
-                        <input type="radio" name="r1" id="r2"><label for="r2">
-                            <h4>Education & Tools</h4>
-                        </label>
-                    </div>
-                    <div class="four col">
-                        <input type="radio" name="r1" id="r3"><label for="r3">
-                            <h4>Counseling</h4>
-                        </label>
-                    </div>
-                </div>
-                <input class="submit button" type="submit" value="Get Started">
-            </fieldset>
+				<h3>Financial Information</h3>
+				<input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income">
+				<input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Housing Information</h3>
+				<input type="text" name="rent" id="rent" placeholder="Monthly Rent">
+				<input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes">
+				<input type="text" name="phone" id="phone" placeholder="Home/Mobile Phone">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Utilities</h3>
+				<input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
+				<input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
+				<input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling">
+				<input type="text" name="bundlepackagecable" id="bundlepackagecable"
+					placeholder="Bundle Package/ Cable">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>HealthCare</h3>
+				<input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
+				<input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="dentistvisits">Dentist Visits</option>
+					<option value="optical">Optical</option>
+					<option value="medicalinsurance">Medical Insurance</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>ChildCare</h3>
+				<input type="text" name="daycare" id="daycare" placeholder="DayCare">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="activities">Activities</option>
+					<option value="diapers">Diapers</option>
+					<option value="childsupport">Child Support</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Automobile</h3>
+				<input type="text" name="carpayment" id="carpayment" placeholder="Car Payment">
+				<input type="text" name="carpayment#2" id="carpayment#2" placeholder="Car Payment #2">
+				<input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance">
+				<input type="text" name="gasoline" id="gasoline" placeholder="Gasoline">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="maintenance">Maintenance</option>
+					<option value="registration">Registration/Taxes</option>
+					<option value="parkingbuspasstrain">Parking/Bus Pass/Train</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Food</h3>
+				<input type="text" name="groceries" id="groceries" placeholder="Groceries">
+				<input type="text" name="personalcarehomeitems" id="personalcarehomeitems"
+					placeholder="Personal Care/Home Items">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="diningout">Dining Out</option>
+					<option value="foodatwork">Food At Work</option>
+					<option value="schoollunches">School Lunches</option>
+					<option value="alcoholtobacco">Alcohol/Tobacco</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Installment Loans</h3>
+				<select name="others" id="others">
+					<option value="select">Select</option>
+					<option value="studentloans">Student Loans</option>
+					<option value="taxes">Taxes</option>
+					<option value="businessloans">Business Loans</option>
+					<option value="other">Other</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Miscellaneous</h3>
+				<select name="others" id="others">
+					<option value="select">Select</option>
+					<option value="donations">Charitable Donations</option>
+					<option value="tuition">Education/Tuition/Supplies</option>
+					<option value="entertainment">Entertainment & Recreation</option>
+					<option value="subscriptions">Electronic Subscriptions</option>
+					<option value="petexpense">Pet Expense</option>
+					<option value="jobthings">Job Related Expenses/Tools/Uniforms</option>
+					<option value="laundry">Laundry/Dry Cleaning</option>
+					<option value="storageunit">Storage Unit</option>
+					<option value="emergencysavings">Emergency/Savings</option>
+					<option value="gymmembership">Gym Membership</option>
+					<option value="clothing">Clothing/Accessories</option>
+					<option value="lifeinsurance">Life Insurance</option>
+					<option value="othermisc">Other Misc</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>What are you looking for?</h3>
+				<div class="row cf">
+					<div class="four col">
+						<input type="radio" name="r1" id="r1" checked>
+						<label for="r1">
+							<h4>Debt Management</h4>
+						</label>
+					</div>
+					<div class="four col">
+						<input type="radio" name="r1" id="r2"><label for="r2">
+							<h4>Education & Tools</h4>
+						</label>
+					</div>
+					<div class="four col">
+						<input type="radio" name="r1" id="r3"><label for="r3">
+							<h4>Counseling</h4>
+						</label>
+					</div>
+				</div>
+				<input class="submit button" type="submit" value="Get Started">
+			</fieldset>
 
 
-            <fieldset class="section">
-                <h3>Form finished!</h3>
-                <p>TODO.</p>
-                <div class="button">Reset Form</div>
-            </fieldset>
-        </form>
+			<fieldset class="section">
+				<h3>Form finished!</h3>
+				<p>TODO.</p>
+				<div class="button">Reset Form</div>
+			</fieldset>
+		</form>
 
-    </div>
+	</div>
 </div>
 {% endblock %}
