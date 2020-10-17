@@ -23,33 +23,37 @@ def quiz_page():
 @app.route('/submitform', methods=['POST'])
 def form_submit():
 
+    # Mandatory
+    # Name
     first_name = request.form['firstname']
     last_name = request.form['lastname']
-
+    # Financial Information
     income = request.form['incomeTotal']
-    debtTotal = request.form['debtTotal']
-
+    debt_total = request.form['debtTotal']
+    # Can do without
+    # Housing Information
     rent = request.form.get('rent')
-    propTax = request.form.get('propTaxes')
+    prop_tax = request.form.get('propTaxes')
     phone = request.form.get('phone')
-
+    # Utilities
     power = request.form.get('power')
-    waterSewer = request.form.get('waterSewer')
-    insurance = request.form.get('insurance')
+    water = request.form.get('waterSewer')
+    garbage = request.form.get('garbagerecycling')
+    cable = request.form.get('bundlepackagecable')
+    # Healthcare
+    prescriptions = request.form.get('prescriptions')
+    doctor_visits = request.form.get('doctorvisits')
+    # Childcare
+    daycare = request.form.get('daycare')
+    # Automobile
+    carpayment1 = request.form.get('carpayment1')
+    carpayment2 = request.form.get('carpayment&2')
+    autoinsurance = request.form.get('autoinsurance')
+    gasoline = request.form.get('gasoline')
+    # Food
+    groceries = request.form.get('groceries')
+    pchi = request.form.get('personalcarehomeitems')
 
-    print(first_name)
-    print(last_name)
-
-    print(income)
-    print(debtTotal)
-
-    print(rent)
-    print(propTax)
-    print(phone)
-
-    print(power)
-    print(waterSewer)
-    print(insurance)
 
     return  render_template('index.html')
 
