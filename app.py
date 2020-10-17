@@ -48,7 +48,7 @@ def form_submit():
     else:
         return 'something went wrong. try again!'
 
-    return render_template('index.html')
+    return redirect('/thankyou.html')
 
 # App run
 if __name__ == "__main__":
