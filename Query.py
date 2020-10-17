@@ -7,18 +7,18 @@ CREATE_TABLE = """CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY,
     first_name varchar(25) not null, last_name varchar(25) not null, income INTEGER not null, debt_total INTEGER not null,
     rent INTEGER default 1600, prop_tax FLOAT default 1.05, phone_number varchar(14) default 3025551206, power INTEGER default 80,
     water INTEGER default 72, garbage INTEGER default 14, cable INTEGER default 104, prescriptions INTEGER default 90,
-    doctor_visits INTEGER default 150, daycare INTEGER default 75, carpayment1 INTEGER default 280, carpayment2 INTEGER default 280,
+    doctor_visits INTEGER default 150, carpayment1 INTEGER default 280, carpayment2 INTEGER default 280,
     autoinsurance INTEGER default 140, gasoline INTEGER default 150, groceries INTEGER default 200, pchi INTEGER default 80);"""
 
 INSERT_INFO = """INSERT INTO users(first_name, last_name, income, debt_total, rent, prop_tax, phone_number,
-    power, water, garbage, cable, prescriptions, doctor_visits, daycare, carpayment1, carpayment2,
-    autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
+    power, water, garbage, cable, prescriptions, doctor_visits, carpayment1, carpayment2,
+    autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
 
 SELECT_INFO = """SELECT * from users where id = (%s);"""
 
 class Query:
     def __init__(self, fn, ln, income, debt, rent, prop_tax, phone_number, power, water, garbage, cable,
-                 prescriptions, doctor_visits, daycare, carpayment1, carpayment2, autoinsurance, gasoline,
+                 prescriptions, doctor_visits, carpayment1, carpayment2, autoinsurance, gasoline,
                  groceries, pchi):
         self.first_name = fn
         self.last_name = ln
@@ -33,7 +33,6 @@ class Query:
         self.cable = cable
         self.prescriptions = prescriptions
         self.doctor_visits = doctor_visits
-        self.daycare = daycare
         self.carpayment1 = carpayment1
         self.carpayment2 = carpayment2
         self.autoinsurance = autoinsurance
@@ -55,7 +54,6 @@ class Query:
         Cable: {self.cable}
         Prescriptions: {self.prescriptions}
         Doctor Visits: {self.doctor_visits}
-        Daycare: {self.daycare}
         Car Payment 1: {self.carpayment1} Car Payment 2: {self.carpayment2}
         Auto Insurance: {self.autoinsurance}
         Gasoline: {self.gasoline}
@@ -81,7 +79,7 @@ class Query:
                     cursor.execute(INSERT_INFO, (self.first_name, self.last_name, self.income, self.debt_total, self.rent,
                                                  self.prop_tax, self.phone_number, self.power, self.water,
                                                  self.garbage, self.cable, self.prescriptions, self.doctor_visits,
-                                                 self.daycare, self.carpayment1, self.carpayment2, self.autoinsurance,
+                                                 self.carpayment1, self.carpayment2, self.autoinsurance,
                                                  self.gasoline, self.groceries, self.pchi));
 
     def select_all(self, person_id):
