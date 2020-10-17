@@ -10,12 +10,15 @@
         $('.buttongood').click(function (){
             window.location.href = 'results';
             localStorage["1"] = "Your Previous Answers Contradict";
+            localStorage["2"] = "../../static/liar"
+            
         })
     })
     $().ready(function () {
         $('.buttonbad').click(function (){
             window.location.href = 'results';
             localStorage["1"] = 'Continue To Be Concious!';
+            localStorage["2"] = "../../static/cautious"
         })
     })
 

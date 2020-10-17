@@ -7,18 +7,21 @@
 {% block body %}
 
 <script>
-	$().ready(function () {
-		$('.buttongood').click(function () {
-			window.location.href = 'results';
-			localStorage["1"] = "You are on the Right Track!"
-		})
-	})
-	$().ready(function () {
-		$('.buttonbad').click(function () {
-			window.location.href = 'results';
-			localStorage["1"] = "Brush Up on Some Basic Division"
-		})
-	})
+    $().ready(function () {
+        $('.buttongood').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "You are on the Right Track!"
+            localStorage["2"] = "../../static/success"
+
+        })
+    })
+    $().ready(function () {
+        $('.buttonbad').click(function (){
+            window.location.href = 'results';
+            localStorage["1"] = "Brush Up on Some Basic Division"
+            localStorage["2"] = "../../static/confusedmath"
+        })
+    })
 
 </script>
 
