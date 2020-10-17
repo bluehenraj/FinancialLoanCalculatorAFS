@@ -5,11 +5,22 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="main-title">AMERICAN FINANCIAL SOLUTIONS</h1>
-<a href="/form">
-	<button class="form-button">Fill out our form!</button>
-</a>
-<a href="/quiz">
-	<button class="form-button">Take our quiz!</button>
-</a>
+<div class="title">
+	<img src="/static/logo.png" alt="Main Logo" class="logo">
+</div>
+<ul style="list-style-type: none;">
+	<li>
+		<a href="/form">
+			<button class="button">Fill out our form!</button>
+		</a>
+	</li>
+	<li>
+		<a href="/quiz">
+			<button class="button">Take our quiz!</button>
+		</a>
+	</li>
+</ul>
+
+
+
 {% endblock %}

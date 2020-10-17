@@ -15,8 +15,9 @@
 			<li>Step 3</li>
 			<li>Step 4</li>
 			<li>Step 5</li>
+			<li>Step 6</li>
 		</ul>
-		<form class="form-wrapper">
+		<form class="form-wrapper" method="post" action="http://localhost:5000/submitform">
 			<fieldset class="section is-active">
 				<h3>Your Name</h3>
 				<input type="text" name="firstname" id="firstname" placeholder="First Name">
@@ -33,14 +34,37 @@
 				<h3>Housing Information</h3>
 				<input type="text" name="rent" id="rent" placeholder="Monthly Rent">
 				<input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes">
-				<input type="text" name="garbage" id="garbage" placeholder="Home/Mobile Phone">
+				<input type="text" name="phone" id="phone" placeholder="Home/Mobile Phone">
 				<div class="button">Next</div>
 			</fieldset>
 			<fieldset class="section">
 				<h3>Utilities</h3>
-				<input type="text" name="power" id="rent" placeholder="Electric/Gas/Oil">
+				<input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
 				<input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
 				<input type="text" name="insurance" id="insurance" placeholder="Home/Rental Insurance">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>HealthCare</h3>
+				<input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
+				<input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="dentistvisits">Dentist Visits</option>
+					<option value="optical">Optical</option>
+					<option value="medicalinsurance">Medical Insurance</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>ChildCare</h3>
+				<input type="text" name="daycare" id="daycare" placeholder="DayCare">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="activities">Activities</option>
+					<option value="diapers">Diapers</option>
+					<option value="childsupport">Child Support</option>
+				</select>
 				<div class="button">Next</div>
 			</fieldset>
 			<fieldset class="section">
@@ -65,12 +89,15 @@
 				</div>
 				<input class="submit button" type="submit" value="Get Started">
 			</fieldset>
+
+
 			<fieldset class="section">
 				<h3>Form finished!</h3>
 				<p>TODO.</p>
 				<div class="button">Reset Form</div>
 			</fieldset>
 		</form>
+
 	</div>
 </div>
 {% endblock %}
