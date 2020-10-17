@@ -8,7 +8,9 @@
 
 <div class="container">
 	<div class="wrapper">
-		<h1 class="form-title">American Financial Solutions</h1>
+		<div class="title">
+			<img src="/static/blue.jpg" width: 6% alt="Main Logo" class="logo">
+		</div>
 		<ul class="steps">
 			<li class="is-active">Step 1</li>
 			<li>Step 2</li>
@@ -17,6 +19,8 @@
 			<li>Step 5</li>
 			<li>Step 6</li>
 			<li>Step 7</li>
+			<li>Step 8</li>
+
 		</ul>
 		<form class="form-wrapper" method="post" action="http://localhost:5000/submitform">
 			<fieldset class="section is-active">
@@ -42,11 +46,15 @@
 				<h3>Utilities</h3>
 				<input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
 				<input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
-				<input type="text" name="insurance" id="insurance" placeholder="Home/Rental Insurance">
+				<input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling">
+				<input type="text" name="phone" id="phone" placeholder="Phone">
+				<input type="text" name="cellphone" id="cellphone" placeholder="Cell Phone">
+				<input type="text" name="bundlepackagecable" id="bundlepackagecable"
+					placeholder="Bundle Package/ Cable">
 				<div class="button">Next</div>
 			</fieldset>
 			<fieldset class="section">
-				<h3>Health Care</h3>
+				<h3>HealthCare</h3>
 				<input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
 				<input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
 				<select name="others" id="others">
@@ -58,13 +66,41 @@
 				<div class="button">Next</div>
 			</fieldset>
 			<fieldset class="section">
-				<h3>Child Care</h3>
+				<h3>ChildCare</h3>
 				<input type="text" name="daycare" id="daycare" placeholder="DayCare">
 				<select name="others" id="others">
 					<option value="select">Others</option>
 					<option value="activities">Activities</option>
 					<option value="diapers">Diapers</option>
 					<option value="childsupport">Child Support</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Automobile</h3>
+				<input type="text" name="carpayment" id="carpayment" placeholder="Car Payment">
+				<input type="text" name="carpayment#2" id="carpayment#2" placeholder="Car Payment #2">
+				<input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance">
+				<input type="text" name="gasoline" id="gasoline" placeholder="Gasoline">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="maintenance">Maintenance</option>
+					<option value="registration">Registration/Taxes</option>
+					<option value="parkingbuspasstrain">Parking/Bus Pass/Train</option>
+				</select>
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Food</h3>
+				<input type="text" name="groceries" id="groceries" placeholder="Groceries">
+				<input type="text" name="personalcarehomeitems" id="personalcarehomeitems"
+					placeholder="Personal Care/Home Items">
+				<select name="others" id="others">
+					<option value="select">Others</option>
+					<option value="diningout">Dining Out</option>
+					<option value="foodatwork">Food At Work</option>
+					<option value="schoollunches">School Lunches</option>
+					<option value="alcoholtobacco">Alcohol/Tobacco</option>
 				</select>
 				<div class="button">Next</div>
 			</fieldset>
@@ -91,13 +127,119 @@
 				<input class="submit button" type="submit" value="Get Started">
 			</fieldset>
 
+			</ul>
+			<form class="form-wrapper" method="post" action="http://localhost:5000/submitform">
+				<fieldset class="section is-active">
+					<h3>Your Name</h3>
+					<input type="text" name="firstname" id="firstname" placeholder="First Name">
+					<input type="text" name="lastname" id="lastname" placeholder="Last Name">
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>Financial Information</h3>
+					<input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income">
+					<input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt">
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>Housing Information</h3>
+					<input type="text" name="rent" id="rent" placeholder="Monthly Rent">
+					<input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes">
+					<input type="text" name="phone" id="phone" placeholder="Home/Mobile Phone">
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>Utilities</h3>
+					<input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
+					<input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
+					<input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling">
+					<input type="text" name="phone" id="phone" placeholder="Phone">
+					<input type="text" name="cellphone" id="cellphone" placeholder="Cell Phone">
+					<input type="text" name="bundlepackagecable" id="bundlepackagecable"
+						placeholder="Bundle Package/ Cable">
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>HealthCare</h3>
+					<input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
+					<input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
+					<select name="others" id="others">
+						<option value="select">Others</option>
+						<option value="dentistvisits">Dentist Visits</option>
+						<option value="optical">Optical</option>
+						<option value="medicalinsurance">Medical Insurance</option>
+					</select>
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>ChildCare</h3>
+					<input type="text" name="daycare" id="daycare" placeholder="DayCare">
+					<select name="others" id="others">
+						<option value="select">Others</option>
+						<option value="activities">Activities</option>
+						<option value="diapers">Diapers</option>
+						<option value="childsupport">Child Support</option>
+					</select>
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>Automobile</h3>
+					<input type="text" name="carpayment" id="carpayment" placeholder="Car Payment">
+					<input type="text" name="carpayment#2" id="carpayment#2" placeholder="Car Payment #2">
+					<input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance">
+					<input type="text" name="gasoline" id="gasoline" placeholder="Gasoline">
+					<select name="others" id="others">
+						<option value="select">Others</option>
+						<option value="maintenance">Maintenance</option>
+						<option value="registration">Registration/Taxes</option>
+						<option value="parkingbuspasstrain">Parking/Bus Pass/Train</option>
+					</select>
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>Food</h3>
+					<input type="text" name="groceries" id="groceries" placeholder="Groceries">
+					<input type="text" name="personalcarehomeitems" id="personalcarehomeitems"
+						placeholder="Personal Care/Home Items">
+					<select name="others" id="others">
+						<option value="select">Others</option>
+						<option value="diningout">Dining Out</option>
+						<option value="foodatwork">Food At Work</option>
+						<option value="schoollunches">School Lunches</option>
+						<option value="alcoholtobacco">Alcohol/Tobacco</option>
+					</select>
+					<div class="button">Next</div>
+				</fieldset>
+				<fieldset class="section">
+					<h3>What are you looking for?</h3>
+					<div class="row cf">
+						<div class="four col">
+							<input type="radio" name="r1" id="r1" checked>
+							<label for="r1">
+								<h4>Debt Management</h4>
+							</label>
+						</div>
+						<div class="four col">
+							<input type="radio" name="r1" id="r2"><label for="r2">
+								<h4>Education & Tools</h4>
+							</label>
+						</div>
+						<div class="four col">
+							<input type="radio" name="r1" id="r3"><label for="r3">
+								<h4>Counseling</h4>
+							</label>
+						</div>
+					</div>
+					<input class="submit button" type="submit" value="Get Started">
+				</fieldset>
 
-			<fieldset class="section">
-				<h3>Form finished!</h3>
-				<p>TODO.</p>
-				<div class="button">Reset Form</div>
-			</fieldset>
-		</form>
+
+				<fieldset class="section">
+					<h3>Form finished!</h3>
+					<p>TODO.</p>
+					<div class="button">Reset Form</div>
+				</fieldset>
+			</form>
 
 	</div>
 </div>
