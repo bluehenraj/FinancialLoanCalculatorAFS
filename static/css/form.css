@@ -214,7 +214,7 @@ html, body{
 	transform: scale(1, 1);
   }
   
-  .form-wrapper .button, .form-wrapper .submit, .button-back {
+  .form-wrapper .button, .form-wrapper .submit{
 	background-color: #019cd4;
 	display: inline-block;
 	padding: 8px 30px;
@@ -228,8 +228,16 @@ html, body{
   }
 
   .button-back {
+	background-color: #019cd4;
+	display: inline-block;
+	padding: 8px 30px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px !important;
+	font-family: 'Open Sans', sans-serif !important;
+	position: absolute;
 	left: 20px;
-	right: 825px !important;
+	bottom: 20px;
 }
 
   .form-wrapper .submit{
