@@ -4,9 +4,11 @@ from connections import get_connection
 from dotenv import load_dotenv
 
 CREATE_TABLE = """CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY,
-    first_name varchar(25) not null, last_name varchar(25) not null, prop_tax int default 190,
-    phone_number varchar(14) default 3025551234, rent int default 1600, debt_total int not null, income int not null,
-    power_bill int default 100, water_bill int default 70, insurance int default 250);"""
+    first_name varchar(25) not null, last_name varchar(25) not null, income int not null, debt_total int not null,
+    rent int default 1600, prop_tax int default 1.05, phone_number varchar(14) default 3025551206, power int default 80,
+    water int default 72, garbage int default 14, cable int default 104, prescriptions int default 90,
+    doctor_visits int default 150, daycare int default 75, carpayment1 int default 280, carpayment2 int default 280,
+    autoinsurance int default 140, gasoline int default 150, groceries int default 200, pchi int default 80);"""
 
 INSERT_INFO = """INSERT INTO users(first_name, last_name, prop_tax, phone_number, rent, debt_total, income,
     power_bill, water_bill, insurance) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
