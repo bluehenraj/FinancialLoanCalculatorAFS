@@ -20,7 +20,8 @@ html, body{
 	padding-left: 10px;
 	padding-right: 10px;
 	position: relative;
-	  background-color: #a5def4;
+	background-color: #a5def4;
+	border-radius: 12px;
   }  
 
   .tipman {
