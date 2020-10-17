@@ -227,6 +227,10 @@ html, body{
 	bottom: 20px;
   }
 
+  .button {
+	border-radius:5px;
+  }
+
   .button-back {
 	background-color: #019cd4;
 	display: inline-block;
