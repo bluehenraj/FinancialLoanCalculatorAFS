@@ -17,7 +17,10 @@
             <li>Step 5</li>
             <li>Step 6</li>
             <li>Step 7</li>
-            <li>Step 8</li>
+			<li>Step 8</li>
+			<li>Step 9</li>
+			<li>Step 10</li>
+			
             
         </ul>
         <form class="form-wrapper" method="post" action="http://localhost:5000/submitform">
@@ -45,8 +48,6 @@
                 <input type="text" name="power" id="power" placeholder="Electric/Gas/Oil">
                 <input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
                 <input type="text" name="garbagerecycling" id="garbagerecycling" placeholder="Garbage/Recycling">
-                <input type="text" name="phone" id="phone" placeholder="Phone">
-                <input type="text" name="cellphone" id="cellphone" placeholder="Cell Phone">
                 <input type="text" name="bundlepackagecable" id="bundlepackagecable"
                     placeholder="Bundle Package/ Cable">
                 <div class="button">Next</div>
@@ -99,6 +100,37 @@
                     <option value="foodatwork">Food At Work</option>
                     <option value="schoollunches">School Lunches</option>
                     <option value="alcoholtobacco">Alcohol/Tobacco</option>
+                </select>
+                <div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+                <h3>Installment Loans</h3>
+                <select name="others" id="others">
+                    <option value="select">Select</option>
+                    <option value="studentloans">Student Loans</option>
+                    <option value="taxes">Taxes</option>
+                    <option value="businessloans">Business Loans</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="button">Next</div>
+            </fieldset>
+            <fieldset class="section">
+                <h3>Miscellaneous</h3>
+                <select name="others" id="others">
+                    <option value="select">Select</option>
+                    <option value="donations">Charitable Donations</option>
+                    <option value="tuition">Education/Tuition/Supplies</option>
+                    <option value="entertainment">Entertainment & Recreation</option>
+                    <option value="subscriptions">Electronic Subscriptions</option>
+                    <option value="petexpense">Pet Expense</option>
+                    <option value="jobthings">Job Related Expenses/Tools/Uniforms</option>
+                    <option value="laundry">Laundry/Dry Cleaning</option>
+                    <option value="storageunit">Storage Unit</option>
+                    <option value="emergencysavings">Emergency/Savings</option>
+                    <option value="gymmembership">Gym Membership</option>
+                    <option value="clothing">Clothing/Accessories</option>
+                    <option value="lifeinsurance">Life Insurance</option>
+                    <option value="othermisc">Other Misc</option>
                 </select>
                 <div class="button">Next</div>
             </fieldset>
