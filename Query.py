@@ -18,7 +18,7 @@ INSERT_INFO = """INSERT INTO users(first_name, last_name, income, debt_total, re
 
 INSERT_EMAIL = """INSERT INTO emails (email, user_id) VALUES (%s,%s);"""
 
-SELECT_INFO = """SELECT * from users where id = (%s);"""
+SELECT_INFO = """SELECT * from users JOIN emails WHERE id = (%s);"""
 
 class Query:
     def __init__(self, fn, ln, income, debt, rent, prop_tax, phone_number, power, water, garbage, cable,
