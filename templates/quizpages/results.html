@@ -7,20 +7,22 @@
 {% block body %}
 
 
-<div class= "result-background">
+<div class="result-background">
 
-    <div class= "result-center">
-        <script>
-            var value = localStorage["1"];
-            var picSource = document.createElement("img");
-            picSource.src = localStorage["2"] + ".jpg"; 
-            picSource.setAttribute("class", "result-pic");
+	<div class="result-center">
+		<script>
+			var value = localStorage["1"];
+			var picSource = document.createElement("img");
+			picSource.src = localStorage["2"] + ".jpg";
+			picSource.setAttribute("class", "result-pic");
 
-            document.write("<h1>" + value + "</h1>");
-            document.body.appendChild(picSource);
-        </script>
-    </div>
-
+			document.write("<h1 class='trivia-title'>" + value + "</h1>");
+			document.body.appendChild(picSource);
+		</script>
+	</div>
+	<a href="/">
+		<button class="button-trivia btn-email">Return Home</button>
+	</a>
 </div>
 
 

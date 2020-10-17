@@ -44,7 +44,7 @@ html, body{
 .button-trivia {
 	margin: 0;
 	position: absolute;
-	top: 75%;
+	top: 80%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);

@@ -32,6 +32,8 @@ html, body{
 	-ms-transform: translateY(-70%);
 	transform: translateY(-70%);
 	width: 80%;
+	-moz-user-select: none; 
+	-webkit-user-drag: none;
   }
 
   .tip-text {
