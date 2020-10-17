@@ -6,22 +6,22 @@
 
 {% block body %}
 <script>
-    $().ready(function () {
-        $('.playButton').click(function (){
-            window.location.href = 'quizpages/videopage';
-        })
-    })
+	$().ready(function () {
+		$('.playButton').click(function () {
+			window.location.href = 'quizpages/videopage';
+		})
+	})
 
 </script>
 
-<div class ="app"> 
-    <div class = "box">
-        <h1 class = "titleFont">Financial Education Class</h1>
-        
-        <button class = "playButton">Play!</button>
+<div class="app">
+	<div class="box">
+		<h1 class="titleFont">Financial Education Class</h1>
 
-        
-    </div>
+		<button class="playButton"><span class="btn-text">Play!</span></button>
+
+
+	</div>
 </div>
 
 {% endblock %}
