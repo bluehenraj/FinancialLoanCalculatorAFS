@@ -108,16 +108,16 @@
 				<h1 id="quotenum">TBD /mo.</h1>
 			</div>
 			<ul class="steps">
-				<li class="is-active">Step 1</li>
-				<li>Step 2</li>
-				<li>Step 3</li>
-				<li>Step 4</li>
-				<li>Step 5</li>
-				<li>Step 6</li>
-				<li>Step 7</li>
-				<li>Step 8</li>
-				<li>Step 9</li>
-				<li>Step 10</li>
+				<li class="is-active">Name</li>
+				<li>Income</li>
+				<li>Housing</li>
+				<li>Utilities</li>
+				<li>Health Care</li>
+				<li>Food</li>
+				<li>Automobile</li>
+				<li>Misc.</li>
+				<li>Needs</li>
+				<li>Done!</li>
 			</ul>
 			<form class="form-wrapper" method="post" action="http://localhost:5000/submitform">
 				<fieldset class="section is-active">
@@ -131,6 +131,7 @@
 					<input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income" onkeyup="sum()">
 					<input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt" onkeyup="sum()">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>Housing Information</h3>
@@ -138,6 +139,7 @@
 					<input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes" onkeyup="sum()">
 					<input type="text" name="phone" id="phone" placeholder="Home/Mobile Phone">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>Utilities</h3>
@@ -148,12 +150,14 @@
 					<input type="text" name="bundlepackagecable" id="bundlepackagecable"
 						placeholder="Bundle Package/ Cable" onkeyup="sum()">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
-					<h3>HealthCare</h3>
+					<h3>Health Care</h3>
 					<input type="text" name="prescriptions" id="prescriptions" placeholder="Prescriptions">
 					<input type="text" name="doctorvisits" id="doctorvisits" placeholder="Doctor Visits">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>Food</h3>
@@ -161,6 +165,7 @@
 					<input type="text" name="personalcarehomeitems" id="personalcarehomeitems"
 						placeholder="Personal Care/Home Items" onkeyup="sum()">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>Automobile</h3>
@@ -169,6 +174,7 @@
 					<input type="text" name="autoinsurance" id="autoinsurance" placeholder="Auto Insurance">
 					<input type="text" name="gasoline" id="gasoline" placeholder="Gasoline">
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>Miscellaneous</h3>
@@ -189,6 +195,7 @@
 						<option value="othermisc">Other Misc</option>
 					</select>
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<h3>What are you looking for?</h3>
@@ -211,6 +218,7 @@
 						</div>
 					</div>
 					<div class="button">Next</div>
+					<div class="button-back">Back</div>
 				</fieldset>
 				<fieldset class="section">
 					<section class="container-email">
@@ -229,6 +237,7 @@
 							</form>
 						</section>
 					</section>
+					<div class="button-back">Back</div>
 				</fieldset>
 			</form>
 		</div>
