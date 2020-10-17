@@ -3,7 +3,7 @@ import Query
 import connections
 
 def main():
-    yeet = Query.Query("Ryan", "Rosiak", 250, 500, 20, 1000, 75000)
+    yeet = Query.Query("Ryan", "Rosiak", 500, 3025851206, 24, 35, 10000, 5000, 700, 20)
 
     print(yeet)
 

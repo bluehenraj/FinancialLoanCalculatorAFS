@@ -34,29 +34,15 @@ def form_submit():
     income = request.form['incomeTotal']
     debtTotal = request.form['debtTotal']
 
-    rent = request.form.get('rent')
-    propTax = request.form.get('propTaxes')
-    phone = request.form.get('phone')
+    rent = request.form.get('rent', None)
+    propTax = request.form.get('propTaxes', None)
+    phone_number = request.form.get('phone', None)
 
-    power = request.form.get('power')
-    waterSewer = request.form.get('waterSewer')
-    insurance = request.form.get('insurance')
+    power = request.form.get('power', None)
+    waterSewer = request.form.get('waterSewer', None)
+    insurance = request.form.get('insurance', None)
 
-    print(first_name)
-    print(last_name)
-
-    print(income)
-    print(debtTotal)
-
-    print(rent)
-    print(propTax)
-    print(phone)
-
-    print(power)
-    print(waterSewer)
-    print(insurance)
-
-    return  render_template('index.html')
+    return render_template('index.html')
 
 # App run
 if __name__ == "__main__":
