@@ -9,7 +9,6 @@ app = Flask(__name__)
 load_dotenv()
 # Set the environment variable
 database_url = os.environ["DATABASE_URL"]
-
 # Home
 @app.route('/')
 def my_home():
