@@ -5,5 +5,72 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="main-title">Debt Help Form</h1>
+
+<div class="container">
+	<div class="wrapper">
+		<h1 class="form-title">American Financial Solutions</h1>
+		<ul class="steps">
+			<li class="is-active">Step 1</li>
+			<li>Step 2</li>
+			<li>Step 3</li>
+			<li>Step 4</li>
+			<li>Step 5</li>
+		</ul>
+		<form class="form-wrapper">
+			<fieldset class="section is-active">
+				<h3>Your Name</h3>
+				<input type="text" name="firstname" id="firstname" placeholder="First Name">
+				<input type="text" name="lastname" id="lastname" placeholder="Last Name">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Financial Information</h3>
+				<input type="text" name="incomeTotal" id="incomeTotal" placeholder="Annual Income">
+				<input type="text" name="debtTotal" id="debtTotal" placeholder="Total Debt">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Housing Information</h3>
+				<input type="text" name="rent" id="rent" placeholder="Monthly Rent">
+				<input type="text" name="propTaxes" id="propTaxes" placeholder="Property Taxes">
+				<input type="text" name="garbage" id="garbage" placeholder="Home/Mobile Phone">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>Utilities</h3>
+				<input type="text" name="power" id="rent" placeholder="Electric/Gas/Oil">
+				<input type="text" name="waterSewer" id="waterSewer" placeholder="Water/Sewer">
+				<input type="text" name="insurance" id="insurance" placeholder="Home/Rental Insurance">
+				<div class="button">Next</div>
+			</fieldset>
+			<fieldset class="section">
+				<h3>What are you looking for?</h3>
+				<div class="row cf">
+					<div class="four col">
+						<input type="radio" name="r1" id="r1" checked>
+						<label for="r1">
+							<h4>Debt Management</h4>
+						</label>
+					</div>
+					<div class="four col">
+						<input type="radio" name="r1" id="r2"><label for="r2">
+							<h4>Education & Tools</h4>
+						</label>
+					</div>
+					<div class="four col">
+						<input type="radio" name="r1" id="r3"><label for="r3">
+							<h4>Counseling</h4>
+						</label>
+					</div>
+				</div>
+				<input class="submit button" type="submit" value="Get Started">
+			</fieldset>
+			<fieldset class="section">
+				<h3>Form finished!</h3>
+				<p>TODO.</p>
+				<div class="button">Reset Form</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
 {% endblock %}
