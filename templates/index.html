@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
 {% endblock %}
 
 {% block body %}
 <h1 class="main-title">AMERICAN FINANCIAL SOLUTIONS</h1>
 <a href="/form">
 	<button class="form-button">Fill out our form!</button>
+</a>
+<a href="/quiz">
+	<button class="form-button">Take our quiz!</button>
 </a>
 {% endblock %}

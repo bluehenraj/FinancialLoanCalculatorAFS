@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Load the environment variables
 load_dotenv()
 # Set the environment variable
-database_url = os.environ["DATABASE_URL"] 
+database_url = os.environ["DATABASE_URL"] = 'postgres://jrgdwmtt:3fgQLGwPUtw0iM_VXorqJV3XwZSwJQOJ@salt.db.elephantsql.com:5432/jrgdwmtt'
 
 # Home
 @app.route('/')

@@ -1,6 +1,13 @@
-import app
+import os
 from contextlib import contextmanager
-from psycoph2.pool import SimpleConnectionPool
+from psycopg2.pool import SimpleConnectionPool
+from dotenv import load_dotenv
+
+# Load the environment variables
+load_dotenv()
+
+# Assign the environment variables
+database_url = os.environ["DATABASE_URL"]
 
 pool = SimpleConnectionPool(minconn=1, maxconn=10, dsn=database_url)
 
@@ -12,4 +19,4 @@ def get_connection():
     try:
         yield connection
     finally:
-        pool.putconn()
+        pool.putconn(connection)
