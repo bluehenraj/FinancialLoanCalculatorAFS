@@ -24,7 +24,6 @@
 		$(document).ready(function () {
 			var vid = document.getElementById("spendingPlanVideo");
 			vid.addEventListener('timeupdate', (event) => {
-				console.log(vid.currentTime);
 				if (vid.currentTime >= 1 * 60) {
 					vid.pause();
 				}
