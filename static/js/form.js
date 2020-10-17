@@ -50,7 +50,7 @@ $(document).ready(function () {
 		currentSection.removeClass("is-active").next().addClass("is-active");
 		headerSection.removeClass("is-active").next().addClass("is-active");
 
-		if (currentSectionIndex === 8) {
+		if (currentSectionIndex === 9) {
 			$(document).find(".form-wrapper .section").first().addClass("is-active");
 			$(document).find(".steps li").first().addClass("is-active");
 		}
