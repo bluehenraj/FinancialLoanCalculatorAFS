@@ -10,9 +10,13 @@ CREATE_TABLE = """CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY,
     doctor_visits INTEGER default 150, carpayment1 INTEGER default 280, carpayment2 INTEGER default 280,
     autoinsurance INTEGER default 140, gasoline INTEGER default 150, groceries INTEGER default 200, pchi INTEGER default 80);"""
 
+CREATE_TABLE_EMAIL = """CREATE TABLE IF NOT EXISTS emails(email TEXT, user_id INTEGER, FOREIGN KEY(user_id) REFERENCES users(id));"""
+
 INSERT_INFO = """INSERT INTO users(first_name, last_name, income, debt_total, rent, prop_tax, phone_number,
     power, water, garbage, cable, prescriptions, doctor_visits, carpayment1, carpayment2,
     autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
+
+INSERT_EMAIL = """INSERT INTO emails (email, user_id) VALUES (%s,%s);"""
 
 SELECT_INFO = """SELECT * from users where id = (%s);"""
 
@@ -81,6 +85,15 @@ class Query:
                                                  self.garbage, self.cable, self.prescriptions, self.doctor_visits,
                                                  self.carpayment1, self.carpayment2, self.autoinsurance,
                                                  self.gasoline, self.groceries, self.pchi));
+
+    def insert_email(self, email, corres_id):
+        """
+        Inserts email and it's corresponding person id into the table
+        """
+        with get_connection() as connection:
+            with connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(INSERT_EMAIL, (email, corres_id))
 
     def select_all(self, person_id):
         """
