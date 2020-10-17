@@ -14,7 +14,7 @@ CREATE_TABLE_EMAIL = """CREATE TABLE IF NOT EXISTS emails(email TEXT, user_id IN
 
 INSERT_INFO = """INSERT INTO users(first_name, last_name, income, debt_total, rent, prop_tax, phone_number,
     power, water, garbage, cable, prescriptions, doctor_visits, carpayment1, carpayment2,
-    autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
+    autoinsurance, gasoline, groceries, pchi) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id;"""
 
 INSERT_EMAIL = """INSERT INTO emails (email, user_id) VALUES (%s,%s);"""
 
@@ -72,10 +72,11 @@ class Query:
             with connection:
                 with connection.cursor() as cursor:
                     cursor.execute(CREATE_TABLE)
+                    cursor.execute(CREATE_TABLE_EMAIL)
 
     def insert_all(self):
         """
-        Inserts data when ALL data is known
+        Inserts data for each attribute, must have all data populated. Returns the id of the user for future use
         """
         with get_connection() as connection:
             with connection:
@@ -85,6 +86,7 @@ class Query:
                                                  self.garbage, self.cable, self.prescriptions, self.doctor_visits,
                                                  self.carpayment1, self.carpayment2, self.autoinsurance,
                                                  self.gasoline, self.groceries, self.pchi));
+                    return cursor.fetchone()[0]
 
     def insert_email(self, email, corres_id):
         """
