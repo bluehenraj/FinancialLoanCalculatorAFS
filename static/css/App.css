@@ -10,8 +10,8 @@
 }
 
 .modal-contents {
-  height: 300px;
-  width: 500px;
+  height: 600px;
+  width: 1000px;
   background-color: white;
   text-align: center;
   padding: 20px;
@@ -19,8 +19,13 @@
   border-radius: 4px;
 }
 
+.modal-contents h4 {
+	font-size: 2rem;
+}
+
 .buttongood {
   background-color: #e7e7e7;
+  margin-bottom: 1.5rem;
   color: black;
   border: none;
   padding: 15px 32px;
@@ -29,6 +34,21 @@
   display: inline-block;
   font-size: 16px;
 }
+
+.buttongood:hover, .buttonbad:hover {
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.final-result {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: fit-content;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .buttonbad {
   background-color: #e7e7e7;
   color: black;
@@ -38,12 +58,18 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin-bottom: 1.5rem;
 }
 
 .multiple-choice {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
 }
 
 .titleFont {

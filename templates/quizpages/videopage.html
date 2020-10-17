@@ -6,36 +6,38 @@
 
 {% block body %}
 <script>
-    $().ready(function () {
-        $('.buttongood').click(function (){
-            window.location.href = 'question2';
-        })
-    })
-    $().ready(function () {
-        $('.buttonbad').click(function (){
-            window.location.href = 'question2bad';
-        })
-    })
+	$().ready(function () {
+		$('.buttongood').click(function () {
+			score += 1;
+			window.location.href = 'question2';
+		})
+	})
+	$().ready(function () {
+		$('.buttonbad').click(function () {
+			window.location.href = 'question2bad';
+		})
+	})
 
 </script>
 
 
-<div class= "bg-modal">
-    <div class="animated">
+<div class="bg-modal">
+	<div class="animated">
 
-    
-        <div class = "modal-contents">
-            <h4>What are some warning signs that you are in financial danger?</h4>
 
-            <div class="multiple-choice">
-                <button class="buttongood" >Using credit cards to buy necessities because you do not have enough money</button>
-                <button class="buttongood" >You have bills that are unpaid</button>
-                <button class="buttongood" >You have no money set aside for emergencies</button>
-                <button class="buttonbad" >What warning signs??</button>
-            </div>
-            
-        </div>
-    </div>
+		<div class="modal-contents">
+			<h4>What are some warning signs that you are in financial danger?</h4>
+
+			<div class="multiple-choice">
+				<button class="buttongood">Using credit cards to buy necessities because you do not have enough
+					money</button>
+				<button class="buttongood">You have bills that are unpaid</button>
+				<button class="buttongood">You have no money set aside for emergencies</button>
+				<button class="buttonbad">What warning signs??</button>
+			</div>
+
+		</div>
+	</div>
 
 </div>
 
