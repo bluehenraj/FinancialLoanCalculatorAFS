@@ -22,6 +22,10 @@ html, body{
 	font-weight: 200;
   }
 
+  h1 {
+	  font-size: 3rem;
+  }
+
   h3 {
 	  font-size: 2rem;
   }
